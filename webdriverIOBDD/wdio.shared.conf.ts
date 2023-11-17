@@ -139,12 +139,12 @@ export const config: WebdriverIO.Config = {
       //   outputDir: './test/reports/json-results'
       //   }],
 
-      // ['junit', {
-      //   outputDir: './test/reports/junit-results',
-      //   outputFileFormat: function(options) {
-      //         return `results-${options.cid}.${options.capabilities}.xml`
-      //     }
-      // }],
+      ['junit', {
+        outputDir: './test/reports/junit-results',
+        outputFileFormat: function(options) {
+              return `results-${options.cid}.${options.capabilities}.xml`
+          }
+      }],
 
     ],
     //
