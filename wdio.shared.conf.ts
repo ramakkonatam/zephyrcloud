@@ -135,9 +135,9 @@ export const config: WebdriverIO.Config = {
           disableWebdriverScreenshotsReporting: true,
       }],
       
-      ['json', {
-        outputDir: './test/reports/json-results'
-        }],
+      // ['json', {
+      //   outputDir: './test/reports/json-results'
+      //   }],
 
       ['junit', {
         outputDir: './test/reports/junit-results',
