@@ -7,7 +7,7 @@ describe('checkboxes', () =>  {
         await expect(CheckboxPage.lastCheckbox).toBeSelected()
     })
 
-    it.skip('checkbox 1 should be enabled after clicking on it(Zephyr ID:KAN-T1)', async () =>  {
+    it('checkbox 1 should be enabled after clicking on it(Zephyr ID:KAN-T1)', async () =>  {
         await CheckboxPage.open()
         await expect(CheckboxPage.firstCheckbox).not.toBeSelected()
         await CheckboxPage.firstCheckbox.click()
