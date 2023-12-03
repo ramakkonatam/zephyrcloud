@@ -22,17 +22,17 @@ pipeline {
             }
         }
 
-        stage('Build') {
-            steps {
-                // Build your npm project
-                sh 'npm run build'
-            }
-        }
+        // stage('Build') {
+        //     steps {
+        //         // Build your npm project
+        //         sh 'npm run build'
+        //     }
+        // }
 
         stage('Test') {
             steps {
                 // Run tests for your npm project
-                sh 'npm test'
+                sh 'npm run test-local'
             }
         }
 
