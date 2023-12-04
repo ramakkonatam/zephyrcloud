@@ -45,12 +45,19 @@ pipeline {
         sh 'ls -R ./test/reports'
     }
   }
+        // stage('Create Zip File') {
+        //     steps {
+        //         // Create zip file
+        //         sh 'zip -D ./test/reports/junit-results.zip ./test/reports/junit-results/'
+        //     }
+        // }
         stage('Create Zip File') {
-            steps {
-                // Create zip file
-                sh 'zip -D ./test/reports/junit-results.zip ./test/reports/junit-results/'
-            }
+          steps {
+        dir('./test/reports/junit-results') {
+            sh 'zip -r junit-results.zip .'
         }
+    }
+}
          stage('Upload Results to Zephyr Scale') {
             steps {
                 script {
