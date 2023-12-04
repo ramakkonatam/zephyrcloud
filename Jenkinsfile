@@ -43,7 +43,7 @@ pipeline {
         stage('Create Zip File') {
             steps {
                 // Create zip file
-                sh 'zip -D test/reports/junit_tests.zip test/reports/junit-results/'
+                sh 'zip -D ./test/reports/junit_tests.zip ./test/reports/junit-results/'
             }
         }
          stage('Upload Results to Zephyr Scale') {
