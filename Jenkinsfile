@@ -68,9 +68,6 @@ pipeline {
         }
     }
 
-        // Add more stages as needed for deployment, etc.
-    }
-
     post {
         success {
             // Perform actions after a successful build
