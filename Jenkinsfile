@@ -9,7 +9,7 @@ pipeline {
 
     parameters {
         string(name: 'PROJECT_KEY',defaultValue:'KAN', description: 'Jira project key for tests')
-        string(name: 'TOKEN', defaultValue:'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJjb250ZXh0Ijp7ImJhc2VVcmwiOiJodHRwczovL3JhbWFrb25hdGFtLmF0bGFzc2lhbi5uZXQiLCJ1c2VyIjp7ImFjY291bnRJZCI6IjcxMjAyMDphYjk2OWMzOC04MDNmLTQyYTYtOWE4OC1iZGFjOWZmNDA3MWQifX0sImlzcyI6ImNvbS5rYW5vYWgudGVzdC1tYW5hZ2VyIiwic3ViIjoiY2EwNjIxNDktNzIzYy0zZTIyLWIwYjctMDMxMTVjNGJkYWIyIiwiZXhwIjoxNzMzMjAyNDQ0LCJpYXQiOjE3MDE2NjY0NDR9.qJOr2yBetsQGRXdUuRdWLtdTUPF5DIynjsfD1b0RsNw',description: 'Public REST API token for Zephyr Scale')
+        string(name: 'TOKEN', defaultValue:'06611a22-fb19-4e84-9e04-63eff80de914',description: 'Public REST API token for Zephyr Scale')
     }
     
     stages {
