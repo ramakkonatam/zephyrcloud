@@ -40,6 +40,33 @@ pipeline {
                 sh 'npm run test-local'
             }
         }
+        stage('Create Zip File') {
+            steps {
+                // Create zip file
+                sh 'zip -D ./reports/junit_tests.zip test/reports/junit-results/'
+            }
+        }
+         stage('Upload Results to Zephyr Scale') {
+            steps {
+                script {
+                    // Check if parameters are provided
+                    if (!params.PROJECT_KEY || !params.TOKEN) {
+                        error "Some or all of the parameters are missing. Usage: jenkinsJob -DPROJECT_KEY=<projectKey> -DTOKEN=<token>"
+                    }
+
+                    // Set project key and token
+                    def PROJECT_KEY = params.PROJECT_KEY
+                    def TOKEN = params.TOKEN
+
+                    // API URL
+                    def URL = "https://api.zephyrscale.smartbear.com/v2/automations/executions/junit?projectKey=${PROJECT_KEY}&autoCreateTestCases=false"
+
+                    // Upload results to Zephyr Scale
+                    sh "curl -o -X POST -F 'file=@reports/junit_tests.zip' -H 'Authorization: Bearer ${TOKEN}' $URL"
+                }
+            }
+        }
+    }
 
         // Add more stages as needed for deployment, etc.
     }
