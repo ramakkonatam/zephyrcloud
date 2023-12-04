@@ -42,7 +42,7 @@ pipeline {
         }
         stage('Debug') {
     steps {
-        sh 'ls -R ./test/repports'
+        sh 'ls -R ./test/reports'
     }
   }
         stage('Create Zip File') {
