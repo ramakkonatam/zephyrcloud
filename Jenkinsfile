@@ -43,7 +43,7 @@ pipeline {
         stage('Create Zip File') {
             steps {
                 // Create zip file
-                sh 'zip -D ./reports/junit_tests.zip test/reports/junit-results/'
+                sh 'zip -D test/reports/junit_tests.zip test/reports/junit-results/'
             }
         }
          stage('Upload Results to Zephyr Scale') {
@@ -62,7 +62,7 @@ pipeline {
                     def URL = "https://api.zephyrscale.smartbear.com/v2/automations/executions/junit?projectKey=${PROJECT_KEY}&autoCreateTestCases=false"
 
                     // Upload results to Zephyr Scale
-                    sh "curl -o -X POST -F 'file=@reports/junit_tests.zip' -H 'Authorization: Bearer ${TOKEN}' $URL"
+                    sh "curl -o -X POST -F 'file=@test/reports/junit_tests.zip' -H 'Authorization: Bearer ${TOKEN}' $URL"
                 }
             }
         }
