@@ -71,7 +71,7 @@ pipeline {
                     def TOKEN = params.TOKEN
 
                     // API URL
-                    def URL = "https://api.zephyrscale.smartbear.com/v2/automations/executions/junit?projectKey=${PROJECT_KEY}&autoCreateTestCases=false"
+                    def URL = "https://api.zephyrscale.smartbear.com/v2/automations/executions/junit?projectKey=${PROJECT_KEY}&autoCreateTestCases=true"
 
                     // Upload results to Zephyr Scale
                     sh "cd ./test/reports/junit-results && curl -X POST -F 'file=@junit-results.zip' -H 'Authorization: Bearer ${TOKEN}' $URL"
