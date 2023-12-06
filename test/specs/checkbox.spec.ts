@@ -1,6 +1,6 @@
 import CheckboxPage from '../pageobjects/checkbox.page.ts'
 
-describe('checkboxes', () =>  {
+describe('Launch the web page and register', () =>  {
     it('navigate to yahoo page', async () =>  {
         await CheckboxPage.open()
         await expect(CheckboxPage.firstCheckbox).not.toBeSelected()
