@@ -13,7 +13,4 @@ describe('Launch the web page and register', () =>  {
         await CheckboxPage.firstCheckbox.click()
         await expect(CheckboxPage.firstCheckbox).toBeSelected()
     })
-     it('Launch the web page and register', async () =>  {
-        console.log('test')
-    })
 })
