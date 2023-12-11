@@ -18,4 +18,7 @@ describe('Test for the herokuapp login pages',  () =>  {
     //console.log(await landingPage.getMessage());
 
   });
+  it('test user name', async () =>  {
+    console.log('waiting for reply')
+  });
 });
