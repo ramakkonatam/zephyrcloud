@@ -1,7 +1,7 @@
 import DynamicPage from '../pageobjects/dynamic.page.ts'
 
-describe('dynamic loading', () =>  {
-    it('should be an button on the page', async () =>  {
+describe('dynamic loading of web page', () =>  {
+    it('should be an button on the webpage', async () =>  {
         await DynamicPage.open()
         await expect(DynamicPage.loadedPage).not.toBePresent()
 
