@@ -11,11 +11,17 @@ describe('Launch the website page and register', () =>  {
         await expect(CheckboxPage.lastCheckbox).toBeSelected()
     })
 
-    it('click checkbox on website', async () =>  {
+    it('Navigate to signup page', async () =>  {
+        allureReporter.addAllureId("397")
         allureReporter.addTag("api")
+        allureReporter.addStep("Launch the URL https://yahoo.com")
+        allureReporter.addStep("Clickon signup button")
+        allureReporter.addStep("Enteruser email")
+        allureReporter.addStep("Enter passowrd")
+        allureReporter.addStep("Clickon complete button")
         await CheckboxPage.open()
         await expect(CheckboxPage.firstCheckbox).not.toBeSelected()
         await CheckboxPage.firstCheckbox.click()
-        await expect(CheckboxPage.firstCheckbox).not.toBeSelected()
+        await expect(CheckboxPage.firstCheckbox).toBeSelected()
     })
 })
