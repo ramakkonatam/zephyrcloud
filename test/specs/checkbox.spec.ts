@@ -1,10 +1,10 @@
 import CheckboxPage from '../pageobjects/checkbox.page.ts'
 import allureReporter from '@wdio/allure-reporter';
 describe('Launch the website page and register', () =>  {
-    it('Create user and give access', async () =>  {
+    it('Authentication with user details', async () =>  {
         allureReporter.addTag("web")
-        allureReporter.addAllureId("367")
-        allureReporter.addStep("Navigateto the website")
+        allureReporter.addAllureId("398")
+        allureReporter.addStep("Clickon signup button")
         await CheckboxPage.open()
         allureReporter.addStep("Create new user")
         await expect(CheckboxPage.firstCheckbox).not.toBeSelected()
@@ -12,13 +12,6 @@ describe('Launch the website page and register', () =>  {
     })
 
     it('Navigate to signup page', async () =>  {
-        allureReporter.addAllureId("397")
-        allureReporter.addTag("api")
-        allureReporter.addStep("Launch the URL https://yahoo.com")
-        allureReporter.addStep("Clickon signup button")
-        allureReporter.addStep("Enteruser email")
-        allureReporter.addStep("Enter passowrd")
-        allureReporter.addStep("Clickon complete button")
         await CheckboxPage.open()
         await expect(CheckboxPage.firstCheckbox).not.toBeSelected()
         await CheckboxPage.firstCheckbox.click()
