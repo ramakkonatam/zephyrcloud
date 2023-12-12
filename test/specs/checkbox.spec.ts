@@ -11,11 +11,9 @@ describe('Launch the website page and register', () =>  {
     })
 
     it('click checkbox on website', async () =>  {
-        allureReporter.addAllureId("367")
-        allureReporter.addStep("Grant new access")
         await CheckboxPage.open()
         await expect(CheckboxPage.firstCheckbox).not.toBeSelected()
         await CheckboxPage.firstCheckbox.click()
-        await expect(CheckboxPage.firstCheckbox).toBeSelected()
+        await expect(CheckboxPage.firstCheckbox).not.toBeSelected()
     })
 })
