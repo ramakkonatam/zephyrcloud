@@ -5,6 +5,7 @@ describe('Launch the website page and register', () =>  {
         // allureReporter.addTag("web")
         // allureReporter.addAllureId("398")
         // allureReporter.addStep("Clickon signup button")
+        allureReporter.addTestId("BAC-T17")
         await CheckboxPage.open()
         allureReporter.addStep("Create new user")
         await expect(CheckboxPage.firstCheckbox).not.toBeSelected()
@@ -12,6 +13,7 @@ describe('Launch the website page and register', () =>  {
     })
 
     it('Sample Feature: Sample Scenario', async () =>  {
+        allureReporter.addTestId("BAC-T18")
         await CheckboxPage.open()
         await expect(CheckboxPage.firstCheckbox).not.toBeSelected()
         await CheckboxPage.firstCheckbox.click()
