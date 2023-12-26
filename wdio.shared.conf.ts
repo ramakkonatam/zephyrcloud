@@ -40,6 +40,7 @@ export const config: WebdriverIO.Config = {
     specs: [
         // './test/specs/**/*.ts'
         './test/specs/checkbox.spec.ts'
+        './test/specs/herokuapp-login.spec.ts'
     ],
     // Patterns to exclude.
     exclude: [
