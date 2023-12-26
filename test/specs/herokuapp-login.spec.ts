@@ -16,9 +16,5 @@ describe('Test for the herokuapp login pages',  () =>  {
   it('should validate the message after login the web ', async () =>  {
     assert.equal(await landingPage.getMessage(), "Welcome to the Secure Area. When you are done click logout below.");
     //console.log(await landingPage.getMessage());
-
-  });
-  it('test user name', async () =>  {
-    console.log('waiting for reply')
   });
 });
