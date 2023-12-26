@@ -3,17 +3,18 @@ import allureReporter from '@wdio/allure-reporter';
 describe('Launch the website page and register', () =>  {
     it('As a user, I can log into the secure website', async () =>  {
         // allureReporter.addTag("web")
-        // allureReporter.addAllureId("398")
+        allureReporter.addAllureId("563")
         // allureReporter.addStep("Clickon signup button")
         // allureReporter.addTestId("BAC-T17")
         // allureReporter.addLabel("zephyr","BAC-T17")
         await CheckboxPage.open()
-        allureReporter.addStep("Create new user")
+        allureReporter.addStep("Launch the website https://yahoo.com")
+        allureReporter.addStep("Clickon the user registration")
         await expect(CheckboxPage.firstCheckbox).not.toBeSelected()
         await expect(CheckboxPage.lastCheckbox).toBeSelected()
     })
 
-    it('Sample Feature: Sample Scenario web', async () =>  {
+    it.skip('Sample Feature: Sample Scenario web', async () =>  {
         // allureReporter.addTestId("BAC-T18")
         // allureReporter.addLabel("zephyr","BAC-T18")
         await CheckboxPage.open()
