@@ -7,7 +7,7 @@ describe('Launch the website page and register', () =>  {
         //allureReporter.addTestId("BAC-T17")
         allureReporter.addLabel("zephyr","BAC-T17")
         await CheckboxPage.open()
-        await expect(CheckboxPage.firstCheckbox).not.toBeSelected()
+        await expect(CheckboxPage.firstCheckbox).toBeSelected()
         await expect(CheckboxPage.lastCheckbox).toBeSelected()
     })
 
