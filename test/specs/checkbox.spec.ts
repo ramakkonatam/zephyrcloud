@@ -1,7 +1,7 @@
 import CheckboxPage from '../pageobjects/checkbox.page.ts'
 import allureReporter from '@wdio/allure-reporter';
 describe('Launch the website page and register', () =>  {
-    it('As a user, I can log into the secure website', async () =>  {
+    it('Launch the website and complete the user registration', async () =>  {
         // allureReporter.addTag("web")
         allureReporter.addAllureId("563")
         // allureReporter.addStep("Clickon signup button")
